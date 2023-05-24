@@ -7,3 +7,22 @@
 
 # 385916 -> yes
 # 123456 -> no
+
+ticket = int(input('Введите номер билета: '))
+
+a = ticket // 1000
+a_a = a // 100
+a_b = (a // 10) % 10
+a_c = a % 10
+result_a = a_a + a_b + a_c
+
+b = ticket % 1000
+b_a = b // 100
+b_b = (b // 10) % 10
+b_c = b % 10
+result_b = b_a + b_b + b_c
+
+if result_a == result_b:
+    print('Ура, тебе попался счастливый билет')
+else:
+    print('К сожалению билет не счастливый')
